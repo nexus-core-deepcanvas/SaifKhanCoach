@@ -1,4 +1,5 @@
- /* ===== RESET & BASE ===== */
+
+/* ===== RESET & BASE ===== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -834,17 +835,13 @@ h3 { font-size: 1.4rem; font-weight: 600; }
   color: var(--text-muted);
 }
 
-.gym-image-placeholder {
+.gym-photo {
   width: 100%;
   height: 260px;
-  background: var(--bg-3);
-  border: 2px dashed var(--border);
+  object-fit: cover;
+  object-position: center top;
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  display: block;
 }
 
 .gym-hours {
