@@ -1,5 +1,4 @@
-
-// ===== NAVBAR SCROLL =====
+ // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {

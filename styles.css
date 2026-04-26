@@ -1,5 +1,4 @@
-
-/* ===== RESET & BASE ===== */
+ /* ===== RESET & BASE ===== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -839,9 +838,34 @@ h3 { font-size: 1.4rem; font-weight: 600; }
   width: 100%;
   height: 260px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 22%;  /* keeps full sign + phone number visible */
   border-radius: var(--radius);
   display: block;
+}
+
+/* ===== GYM GALLERY ===== */
+.gym-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.gym-gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.gym-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gym-gallery-item:hover img {
+  transform: scale(1.02);
 }
 
 .gym-hours {
@@ -1137,6 +1161,35 @@ h3 { font-size: 1.4rem; font-weight: 600; }
 
 .contact-item a:hover { color: var(--accent-dark); }
 
+.contact-location-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.contact-location-photo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center 55%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.contact-location-photo:hover img {
+  transform: scale(1.04);
+}
+
+.contact-location-photo span {
+  display: block;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding: 10px 0 4px;
+  letter-spacing: 0.04em;
+}
+
 .contact-icon {
   font-size: 1.1rem;
   width: 20px;
@@ -1419,4 +1472,3 @@ h3 { font-size: 1.4rem; font-weight: 600; }
     justify-content: center;
   }
 }
-
